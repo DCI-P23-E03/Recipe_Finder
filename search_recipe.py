@@ -6,15 +6,27 @@ def search():
         reader = csv.reader(file) 
 
         keyselection = input(""" What are you looking for today? 
-        Press [a] if you want to be inspired or put in an ingredient of your choice: \t""") # request user input
-        recipe_list = []
+        Please put in an ingredient of your choice: \t""") # request user input
+        recipe_list_num = []
+        recipe_list_name = []
+        recipe_count = 0
+  
         for row in reader:
             if keyselection in row [1] or keyselection in row [2] or keyselection in row [5]:
                 recipe_number = row [0]
                 recipe_name = row [1]
-                recipe_list.append(recipe_number)
-                
-                print (f"We found the following recipe(s) for you:\n {recipe_number} {recipe_name}")
+                recipe_list_num.append(recipe_number) # Collect recipe numbers in a list to count
+                recipe_list_name.append(recipe_name) 
+                recipe_count = (len(recipe_list_num))
+                #print(type(recipe_count))    
+                #print(f"{recipe_number} {recipe_name}")
+               
+        if recipe_count > 0:
+            print(f"We found {recipe_count} recipe(s) that match your search.\nThey are:\n{recipe_list_name}")
+        else:
+            print("no matches")
+
+
             #elif keyselection not in row [1] and keyselection not in row [2] and keyselection not in row [5]:
                 #print("No recipes matching your search.")
                 #break
