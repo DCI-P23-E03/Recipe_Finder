@@ -39,7 +39,7 @@ def update_values(values_in):
     while sel not in ['Q', 'S', 'q', 's']:
 
         print_recipe(values_out)
-        sel = input('\nSELECT A SECTION TO UPDTATE[1-6], "S" FINISH UPDATE, "Q" TO CANCEL UPDATE:')
+        sel = input('\nSELECT A SECTION TO UPDTATE[1-6], "S" SAVE CHANGES, "Q" TO CANCEL UPDATE:')
 
         if sel not in ['1','2','3','4','5','6','S','Q','s','q']:
             input('Option not valid. Press ENTER to continue...')
