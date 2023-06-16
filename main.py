@@ -1,7 +1,9 @@
 import csv
 from add_recipe import add_recipe_to_csv
+from search_recipe import recipe_search
+from edit_recipe import edit_recipe
 
-file_path = '/home/user/Documents/DCI_CODE/assignments2023/Recipe_Finder/RecipeNLG_dataset_smaller.csv'
+file_path = '/home/user/Documents/DCI_CODE/assignments2023/RecipeNLG_dataset_smaller.csv'
 
 cookbook_menu = input("""   Welcome to the Recipe Finder!
                             Choose an option (with a number): 
@@ -13,5 +15,7 @@ cookbook_menu = input("""   Welcome to the Recipe Finder!
 """)
 if cookbook_menu == '1':
     add_recipe_to_csv(file_path)
-#elif cookbook_menu == '2':
-    #recipe_search(file_path)
+elif cookbook_menu == '2':
+    recipe_search(file_path)
+elif cookbook_menu == '4':
+    edit_recipe(file_path, row_index = 0)
