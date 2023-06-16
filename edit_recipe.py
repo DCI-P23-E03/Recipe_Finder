@@ -62,13 +62,13 @@ def update_values(values_in):
                 for ing in list_of_ingredients:
                     print(opt,'-',ing)
                     opt = chr(ord(opt)+1) #creates a list of dinamic values for the user
-                    lin = input('\nChoose a line to update, or ENTER to finish:')
-                    if lin !='':
-                        if ord(lin) >= ord('a') and ord(lin) < ord(opt):
-                            print(list_of_ingredients[ord(lin)-ord('a')])
-                            val = input('Enter new value, or just ENTER to skip update:')
-                            if val != '':
-                                list_of_ingredients[ord(lin)-ord('a')] = val
+                lin = input('\nChoose a line to update, or ENTER to finish:')
+                if lin !='':
+                    if ord(lin) >= ord('a') and ord(lin) < ord(opt):
+                        print(list_of_ingredients[ord(lin)-ord('a')])
+                        val = input('Enter new value, or just ENTER to skip update:')
+                        if val != '':
+                            list_of_ingredients[ord(lin)-ord('a')] = val
             
                 values_out[2] = "[" + ", ".join(['"' + s + '"' for s in list_of_ingredients]) + "]" #convert list back into a string
 
@@ -83,13 +83,13 @@ def update_values(values_in):
                 for ing in list_of_instructions:
                     print(opt,'-',ing)
                     opt = chr(ord(opt)+1) #creates a list of dinamic values for the user
-                    lin = input('\nChoose a line to update, or ENTER to finish:')
-                    if lin !='':
-                        if ord(lin) >= ord('a') and ord(lin) < ord(opt):
-                            print(list_of_instructions[ord(lin)-ord('a')])
-                            val = input('Enter new value, or just ENTER to skip update:')
-                            if val != '':
-                                list_of_instructions[ord(lin)-ord('a')] = val
+                lin = input('\nChoose a line to update, or ENTER to finish:')
+                if lin !='':
+                    if ord(lin) >= ord('a') and ord(lin) < ord(opt):
+                        print(list_of_instructions[ord(lin)-ord('a')])
+                        val = input('Enter new value, or just ENTER to skip update:')
+                        if val != '':
+                            list_of_instructions[ord(lin)-ord('a')] = val
                 
                 values_out[3] = "[" + ", ".join(['"' + s + '"' for s in list_of_instructions]) + "]" #convert list back into a string
 
@@ -118,9 +118,9 @@ def update_values(values_in):
                 for ing in list_of_ner:
                     print(opt,'-',ing)
                     opt = chr(ord(opt)+1) #creates a list of dinamic values for the user
-                    lin = input('\nChoose a line to update, or ENTER to finish:')
-                    if lin !='':
-                        if ord(lin) >= ord('a') and ord(lin) < ord(opt):
+                lin = input('\nChoose a line to update, or ENTER to finish:')
+                if lin !='':
+                    if ord(lin) >= ord('a') and ord(lin) < ord(opt):
                         print(list_of_ner[ord(lin)-ord('a')])
                         val = input('Enter new value, or just ENTER to skip update:')
                         if val != '':
@@ -129,8 +129,7 @@ def update_values(values_in):
                 values_out[6] = "[" + ", ".join(['"' + s + '"' for s in list_of_ner]) + "]" #convert list back into a string
 
         if sel in ['Q', 'q']: #if update is aborted, return original values
-
-    values_out = values_in 
+            values_out = values_in 
 
     return values_out
 
@@ -153,3 +152,7 @@ def edit_recipe(file_path, row_index):
         writer.writerows(rows)
 
     return
+
+file_path = 'RecipeNLG_dataset_smaller.csv'
+
+edit_recipe(file_path, 0)
