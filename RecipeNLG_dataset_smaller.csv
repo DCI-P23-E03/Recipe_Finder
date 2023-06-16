@@ -100,3 +100,13 @@
 Pancakes,"Flour, Milk, Eggs, Sugar, Butter","Mix dry ingredients, Whisk eggs and milk, Combine wet and dry ingredients",https://www.example.com/pancakes-recipe,Example Recipes,"pancakes, breakfast, brunch"
 Kartoffelsalat,"Kartoffel, Milk, Eggs, Sugar, Butter","Mix dry ingredients, Whisk eggs and milk, Combine wet and dry ingredients",https://www.example.com/pancakes-recipe,Example Recipes,"pancakes, breakfast, brunch"
 99,Kartoffelsalat,"Kartoffel, Milk, Eggs, Sugar, Butter","Mix dry ingredients, Whisk eggs and milk, Combine wet and dry ingredients",https://www.example.com/pancakes-recipe,Example Recipes,"pancakes, breakfast, brunch"
+/bin/python3 /home/user/Documents/DCI_CODE/assignments2023/Recipe_Finder/main.py,/bin/python3 /home/user/Documents/DCI_CODE/assignments2023/Recipe_Finder/main.py,/bin/python3 /home/user/Documents/DCI_CODE/assignments2023/Recipe_Finder/main.py,/bin/python3 /home/user/Documents/DCI_CODE/assignments2023/Recipe_Finder/main.py,/bin/python3 /home/user/Documents/DCI_CODE/assignments2023/Recipe_Finder/main.py,/bin/python3 /home/user/Documents/DCI_CODE/assignments2023/Recipe_Finder/main.py,/bin/python3 /home/user/Documents/DCI_CODE/assignments2023/Recipe_Finder/main.py
+100,Crustless vegetable ham pie,"1\4 c. butter,  1\4 lb. mushrooms,  1 garlic clove (minced)","Preheat oven to 235 f,  in large frying pan melt butter saute msuhrooms",testrecipe.link,--,"ham,  pie,  butter,  msuhrooms"
+101,ratatouile,"tomato, cheese, love","wash your hands, follow rats instructions, cook ratatouile",new-york.underground.recipes/RATatuoile,--,"rat, new york, michelin"
+105,kartoffelsalat,"kartoffel, mayo, spices","wash your hands, peel potatos, mix all together",kartoffelsalat.de,--,"germany, salad, picknick"
+106,title,"ing 1, ing 2, ing 3 ","dir 1, dir 2, dir 3",link.ua,--,"kw 1, kw2, kw3"
+107,title111,"[""ing 1, ing 2, ing 3, ing 4, done#""]","[""dir 1, dir 2, dir 3, dir 4, dir 5, done#""]",link.de,--- - Gathered,"[""kw 1, kw 2, kw 2""]"
+108,brot,"flour, salt, water","stir, bake",bread.worldwide,/bin/python3 /home/user/Documents/DCI_CODE/assignments2023/Recipe_Finder/main.py,"bread, gluten"
+109,title,"ing 1, ing 2, ing 3, ing 4","dir 1, dir 2, dir 3, dir 4, dir 5",link.de,---,"keyword 1, kew2, dsfdf3"
+110,fhj,"gh, hg","jhk, hgj",link link,---,"gfhjg, jhhk"
+111,asddfs,"[""dsf, sdf""]","[""sdf, sdf""]",sdfdsf.de,--- - Gathered,"[""sdfds, sdfdsgf, sdfdsg""]"
