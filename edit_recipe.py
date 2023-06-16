@@ -153,6 +153,6 @@ def edit_recipe(file_path, row_index):
 
     return
 
-file_path = 'RecipeNLG_dataset_smaller.csv'
-
-edit_recipe(file_path, 0)
+#test
+#file_path = 'RecipeNLG_dataset_smaller.csv'
+#edit_recipe(file_path, 0)
