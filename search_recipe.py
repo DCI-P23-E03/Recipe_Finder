@@ -2,7 +2,7 @@ import csv
 import random
 
 def search():
-    with open("./RecipeNLG_dataset_smaller.csv") as file:
+    with open("/home/dci-student/projects/PythonExcercises/RecipeNLG_dataset_smaller.csv") as file:
         reader = csv.reader(file) 
 
         keyselection = input(""" What are you looking for today? 
@@ -12,7 +12,7 @@ def search():
         recipe_count = 0
   
         for row in reader:
-            if keyselection in row [1] or keyselection in row [2] or keyselection in row [5]or keyselection.lower in row [1] or keyselection.lower in row [2] or keyselection.lower in row [5] or keyselection.capitalize in row [1] or keyselection.capitalize in row [2] or keyselection.capitalize in row [5]:
+            if keyselection in row [1] or keyselection in row [2] or keyselection in row [5]or keyselection.lower() in row [1] or keyselection.lower() in row [2] or keyselection.lower() in row [5] or keyselection.capitalize() in row [1] or keyselection.capitalize() in row [2] or keyselection.capitalize() in row [5]:
                 recipe_number = row [0]
                 recipe_name = row [1]
                 recipe_list_num.append(recipe_number) # Collect recipe numbers in a list to count
