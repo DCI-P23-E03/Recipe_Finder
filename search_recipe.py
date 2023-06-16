@@ -7,16 +7,18 @@ def search():
 
         keyselection = input(""" What are you looking for today? 
         Press [a] if you want to be inspired or put in an ingredient of your choice: \t""") # request user input
-
+        recipe_list = []
         for row in reader:
             if keyselection in row [1] or keyselection in row [2] or keyselection in row [5]:
                 recipe_number = row [0]
-                print (f"We found the following recipe(s) for you {recipe_number} {row [0]}")    
-            elif keyselection not in row[1] and keyselection not in row [2] or keyselection not in row [5]:
-                print ("No recipes matching your search.")        
-            if keyselection == "a":
-                random_recipe = random.choice(row)
-                print (random_recipe[1])
+                recipe_name = row [1]
+                recipe_list.append(recipe_number)
+                
+                print (f"We found the following recipe(s) for you:\n {recipe_number} {recipe_name}")
+            #elif keyselection not in row [1] and keyselection not in row [2] and keyselection not in row [5]:
+                #print("No recipes matching your search.")
+                #break
+                        
                     
 
 search()  
