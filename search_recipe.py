@@ -1,8 +1,13 @@
 import csv
 import random
+#from main import file_path
 
-def search():
-    with open("/home/dci-student/projects/PythonExcercises/RecipeNLG_dataset_smaller.csv") as file:
+
+
+#file_path = '/home/user/Documents/DCI_CODE/assignments2023/RecipeNLG_dataset_smaller.csv'
+def recipe_search(file_path):
+    #global file_path
+    with open(file_path) as file:
         reader = csv.reader(file) 
 
         keyselection = input(""" What are you looking for today? 
@@ -33,7 +38,7 @@ def search():
                         
                     
 
-search()  
+#search()  
 
      
 #def search():# define search function to find recipes
