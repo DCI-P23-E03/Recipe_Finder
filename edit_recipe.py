@@ -150,5 +150,6 @@ def edit_recipe(file_path, row_index):
     # Rewrite the CSV file with the updated record
     with open(csv_file, 'w', newline='') as file:
         writer = csv.writer(file)
+        writer.writerows(rows)
 
     return
