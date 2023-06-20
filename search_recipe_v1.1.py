@@ -12,7 +12,7 @@ def recipe_search():
         recipe_list_name = []
         recipe_count = 0
         recipe_num = int()
-        flag = 0
+    
   
         for row in reader:
             # looking for the keyword in different varieties
@@ -38,14 +38,15 @@ def recipe_search():
 
             # print(recipe_list_num) Check list
 
-            
-                 
-            choice = input("Please choose a recipe:\t")
-            try: 
-                recipe_num = recipe_list_num[int(choice)] # Ensure user's choice is valid
-                    
-            except IndexError:
-                print("Please select a recipe from the list.")    
+            flag = False
+            while flag == False:
+                choice = input("Please choose a recipe:\t")
+                try: 
+                    recipe_num = recipe_list_num[int(choice)] # Ensure user's choice is valid
+                    flag = True     
+                except IndexError:
+                    print("Please select a recipe from the list.")
+                      
 
         else:
             print("No recipes found matching your search.")
