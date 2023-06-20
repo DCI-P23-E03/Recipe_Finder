@@ -1,13 +1,10 @@
 import csv
 import ast
 import os
-
-def clear_screen():
-    # Clear the screen based on the operating system
-    os.system('cls' if os.name == 'nt' else 'clear')
+from bookTools import clear_screen, file_path
 
 # Call the function to clear the screen
-clear_screen()
+#clear_screen()
 
 def print_recipe (recipe):
     clear_screen()
@@ -25,7 +22,7 @@ def print_recipe (recipe):
     print(recipe[4])
     print('\n[5] SOURCE:')
     print(recipe[5])
-    print('\n[6] NER:')
+    print('\n[6] KEYWORDS:')
     list_of_ner = ast.literal_eval(recipe[6])
     for ner in list_of_ner:
         print(ner)
@@ -112,7 +109,7 @@ def update_values(values_in):
             list_of_ner = ast.literal_eval(values_out[6])
             while lin != '':
                 clear_screen()
-                print('[6] NER:')
+                print('[6] KEYWORDS:')
 
                 opt = 'a'
                 for ing in list_of_ner:
@@ -133,7 +130,9 @@ def update_values(values_in):
 
     return values_out
 
-def edit_recipe(file_path, row_index):
+def update_recipe(row_index):
+
+    global file_path
 
     csv_file = file_path #update file path
 

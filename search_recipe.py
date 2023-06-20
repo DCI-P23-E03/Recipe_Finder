@@ -1,9 +1,8 @@
 import csv
-import random
-from  edit_recipe import clear_screen
+from bookTools import clear_screen
 
 def recipe_search():
-    with open("/home/dci-student/projects/PythonExcercises/RecipeNLG_dataset_smaller.csv") as file:
+    with open("RecipeNLG_dataset_smaller.csv") as file:
         reader = csv.reader(file) 
 
         keyselection = input(""" What are you looking for today? 
@@ -51,12 +50,10 @@ def recipe_search():
         else:
             print("No recipes found matching your search.")
        
-    return recipe_num
+    return int(recipe_num)
        
-                        
-                    
-
-recipe_search()  
+                                 
+#recipe_search()   #this is for test  
 
      
 
