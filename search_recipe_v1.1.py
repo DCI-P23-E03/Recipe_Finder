@@ -2,7 +2,7 @@ import csv
 import random
 from  edit_recipe import clear_screen
 
-def search():
+def recipe_search():
     with open("/home/dci-student/projects/PythonExcercises/RecipeNLG_dataset_smaller.csv") as file:
         reader = csv.reader(file) 
 
