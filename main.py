@@ -1,24 +1,33 @@
 import csv
 from add_recipe import add_recipe_to_csv
 from search_recipe import recipe_search
-from edit_recipe import edit_recipe
+#from edit_recipe import edit_recipe
 from display_recipe import display
+from search_to_edit import search_edit
+from bookTools import clear_screen, file_path
 
-file_path = '/home/user/Documents/DCI_CODE/assignments2023/RecipeNLG_dataset_smaller.csv'
+#file_path = '/home/user/Documents/DCI_CODE/assignments2023/RecipeNLG_dataset_smaller.csv'
 
 cookbook_menu = input("""   Welcome to the Recipe Finder!
                             Choose an option (with a number): 
-                            \n1. Add a recipe 
-                            \n2. Search for a recipe 
-                            \n3. Display recipe details
-                            \n4. Edit a recipe
+                            
+                            \n1. Search for a recipe 
+                            \n2. Display all recipes 
+                            \n3. Edit a recipe
+                            \n4. Add a recipe
                             \n5. Delete a recipe
+                            \n
+                                                     
 """)
 if cookbook_menu == '1':
-    add_recipe_to_csv(file_path)
+    search_edit()
 elif cookbook_menu == '2':
-    recipe_search(file_path)
-elif cookbook_menu == '3':  
     display(file_path)
+elif cookbook_menu == '3':  
+    search_edit()
 elif cookbook_menu == '4':
-    edit_recipe(file_path, row_index = 0)
+    add_recipe_to_csv(file_path)
+elif cookbook_menu == '5':
+    print("work in progress")
+else:
+    print("Please choose a valid option")

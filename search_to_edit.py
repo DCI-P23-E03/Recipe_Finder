@@ -12,7 +12,7 @@ def search_edit():
     print('2. Edit')
     print('3. Delete')
 
-    option = input('What would you like to do?')
+    option = input('What would you like to do?      ')
 
     if option == '1':
         with open(file_path, 'r') as file: #open file for reading
