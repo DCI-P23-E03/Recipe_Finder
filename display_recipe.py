@@ -14,7 +14,15 @@ def search_recipe():
         recipe_keyword = input("What recipe are you looking for (by title)? ")
         for key in recipe_dict:
             if recipe_keyword.upper() in key.upper():
-                print(key, recipe_dict[key])
+                print(key)
+                print("\n")
+                print("INGREDIENTS: ", recipe_dict[key]["ingredients"])
+                print("\n")
+                print("LINK: ", recipe_dict[key]["link"])
+                print("\n")
+                print("KEYWORDS: ", recipe_dict[key]["keywords"])
+                print("\n")
+                print("##############################################################################################################")
                 print("\n")
             
 
@@ -23,18 +31,31 @@ def search_recipe():
         recipe_keyword = input("What recipe are you looking for? (by ingredients) ").upper()
         for key in recipe_dict:
             if recipe_keyword in recipe_dict[key]["ingredients"].upper():
-                print(key, recipe_dict[key])
+                print(key)
+                print("\n")
+                print("INGREDIENTS: ", recipe_dict[key]["ingredients"])
+                print("\n")
+                print("LINK: ", recipe_dict[key]["link"])
+                print("\n")
+                print("KEYWORDS: ", recipe_dict[key]["keywords"])
+                print("\n")
+                print("##############################################################################################################")
                 print("\n")
 
     elif display_search == '3':
         recipe_keyword = input("What recipe are you looking for? (by keywords) ").upper()
-        for keyword, valueword in recipe_dict.items():
-            if recipe_keyword in recipe_dict[keyword]["keywords"].upper():
-                print(keyword)
-            for key,value in valueword.items():
-                print(f"{key}: {value}")
-                #print(key, recipe_dict[key])
-                #print("\n")
+        for key in recipe_dict:
+            if recipe_keyword in recipe_dict[key]["keywords"].upper():
+                print(key)
+                print("\n")
+                print("INGREDIENTS: ", recipe_dict[key]["ingredients"])
+                print("\n")
+                print("LINK: ", recipe_dict[key]["link"])
+                print("\n")
+                print("KEYWORDS: ", recipe_dict[key]["keywords"])
+                print("\n")
+                print("##############################################################################################################")
+                print("\n")
 
     else:
         print("Please choose a valid option")
