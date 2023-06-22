@@ -141,7 +141,7 @@ def update_recipe(row_index):
         reader_obj = csv.reader(file)
         rows = list(reader_obj) # Read all the rows into a list
 
-    idx_upt = row_index + 1 #correct row number considering column headers
+    idx_upt = row_index -1  #+ 1 #correct row number considering column headers
 
     rows[idx_upt] = update_values(rows[idx_upt])
 
