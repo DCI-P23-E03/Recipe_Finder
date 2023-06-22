@@ -33,4 +33,6 @@ def search_edit():
 
     return 
 
-
+def justedit():
+    selected_row = recipe_search() 
+    update_recipe(selected_row)

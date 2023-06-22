@@ -2,7 +2,7 @@ import csv
 from add_recipe import add_recipe_to_csv
 from search_recipe import recipe_search
 from display_recipe import display
-from search_to_edit import search_edit
+from search_to_edit import search_edit, justedit
 from delete_recipe import delete_recipe
 from bookTools import clear_screen, file_path
 
@@ -25,7 +25,7 @@ if cookbook_menu == '1':
 elif cookbook_menu == '2':
     display(file_path)
 elif cookbook_menu == '3':  
-    search_edit()
+    justedit()
 elif cookbook_menu == '4':
     add_recipe_to_csv(file_path)
 elif cookbook_menu == '5':
