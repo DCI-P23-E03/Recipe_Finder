@@ -14,8 +14,8 @@ def delete_d(recipe):
     # print(f'{k+1}. {name}')
 
     # user's choice what to delete
-    to_del = input('Press Y(es) if you want to delete')
-    if to_del == 'y':
+    to_del = input('Press Y if you want to delete')
+    if to_del == 'y' or to_del.upper() == 'Y':
         df.drop(recipe, inplace=True) #DELELE WITH DELETE IN ORIGINAL
         df.to_csv(file_path, index=False)
         print('Chosen recipe(s) are deleted')
