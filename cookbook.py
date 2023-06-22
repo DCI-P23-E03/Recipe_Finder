@@ -33,16 +33,33 @@ def search_recipe():
     #search for a recipe by ingredient
     for key in recipe_dict:
         if recipe_keyword in recipe_dict[key]["ingredients"].upper():
-            print(key, recipe_dict[key])
-            print("\n") 
+            print(key)
+            print("\n")                
+            print("INGREDIENTS: ", recipe_dict[key]["ingredients"][1:-1].replace('"',''))
+            print("\n")
+            print("LINK: ", recipe_dict[key]["link"])
+            print("\n")
+            print("KEYWORDS: ", recipe_dict[key]["keywords"][1:-1].replace('"',''))
+            print("\n")
+            print("##############################################################################################################")
+            print("\n")
 
     #search for a recipe by title
     for key in recipe_dict:
         if recipe_keyword in key.upper():
-            print(key, recipe_dict[key])
+            print(key)
+            print("\n")                
+            print("INGREDIENTS: ", recipe_dict[key]["ingredients"][1:-1].replace('"',''))
             print("\n")
+            print("LINK: ", recipe_dict[key]["link"])
+            print("\n")
+            print("KEYWORDS: ", recipe_dict[key]["keywords"][1:-1].replace('"',''))
+            print("\n")
+            print("##############################################################################################################")
+            print("\n")
+   
 
-###################################################################################################################################################################################################
+##################################################################################################################################################################################################
 
 
 #defining a function to add a recipe
