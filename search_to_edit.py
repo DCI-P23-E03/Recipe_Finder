@@ -1,6 +1,7 @@
 from search_recipe import recipe_search
 from edit_recipe import update_recipe, print_recipe
 from bookTools import clear_screen, file_path
+from delete_module_v1 import delete_d
 import csv
 
 def search_edit():
@@ -25,7 +26,8 @@ def search_edit():
     elif option == '2':
         update_recipe(selected_row)
     elif option == '3':
-        print('Delete (TBD)') #delete
+        delete_d(selected_row-2) #delete
+        print("TBD")
     else:
         print('Please select a valid option.')
 
