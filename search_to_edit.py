@@ -20,7 +20,7 @@ def search_edit():
             reader_obj = csv.reader(file)
             rows = list(reader_obj) # Read all the rows into a list
 
-        print_recipe(rows[recipe_index])
+        print_recipe(rows[selected_row-1])
 
     elif option == '2':
         update_recipe(selected_row)

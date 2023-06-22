@@ -1,12 +1,11 @@
 import csv
-from bookTools import clear_screen
+from bookTools import clear_screen, file_path
 
 def recipe_search():
-    with open("RecipeNLG_dataset_smaller.csv") as file:
+    with open (file_path) as file:
         reader = csv.reader(file) 
 
-        keyselection = input(""" What are you looking for today? 
-        Please put in an ingredient of your choice: \t""") # request user input
+        keyselection = input("""What are you looking for today?\nPlease put in an ingredient or title of your choice: \t""") # request user input
         recipe_list_num = [] 
         recipe_list_name = []
         recipe_count = 0
