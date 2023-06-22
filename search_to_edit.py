@@ -27,7 +27,6 @@ def search_edit():
         update_recipe(selected_row)
     elif option == '3':
         delete_d(selected_row-2) #delete
-        print("TBD")
     else:
         print('Please select a valid option.')
 
