@@ -2,13 +2,13 @@ import csv
 from bookTools import clear_screen, file_path
 
 def recipe_search():
+    clear_screen() #start with a clear screen
     with open (file_path) as file:
         reader = csv.reader(file) 
-
         keyselection = input("""What are you looking for today?\nPlease put in an ingredient or title of your choice: \t""") # request user input
-        recipe_list_num = [] 
+        recipe_list_num = [] #define list variable
         recipe_list_name = []
-        recipe_count = 0
+        recipe_count = 0 # define recipe count variable
 
     
   
