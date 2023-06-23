@@ -75,7 +75,7 @@ def recipe_search():
                         print("Please select a recipe from the list.")
                         
             else:
-                print("No recipes found matching your search. Try a different search term.\n")
+                print("\nNo recipes found matching your search. Try a different search term.\n")
                 
 
             with open("RecipeNLG_dataset_smaller.csv") as file:
