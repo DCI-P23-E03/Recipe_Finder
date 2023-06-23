@@ -44,23 +44,19 @@ def recipe_search():
                         #print(f"{recipe_number} {recipe_name}")
             
             elif len(key_list) > 1:
-                print(key_list)
                 #key_list = set(key_list)
                 count = 0
-                for row in reader:
-                    while count+1 <= len(key_list):
-                        if key_list[count] in row[5]:
-                            print(count)
-                            print(key_list[count])
-                            recipe_number = row [0]
-                            recipe_name = row [1]
-                            recipe_list_num.append(recipe_number) # Collect recipe numbers in a list to count
-                            recipe_list_name.append(recipe_name) #Collect recipe names in a list
-                            recipe_count = (len(recipe_list_num))
-                            count +=1
-                            continue
-                        #else:
-                            #break    
+                for row in reader:   
+                    found = 0 
+                    for key in key_list:
+                        if key in row[6]:
+                            found += 1
+                    if found == len(key_list):
+                        recipe_number = row [0]
+                        recipe_name = row [1]
+                        recipe_list_num.append(recipe_number) # Collect recipe numbers in a list to count
+                        recipe_list_name.append(recipe_name) #Collect recipe names in a list
+                        recipe_count = (len(recipe_list_num))
 
             #clear_screen()
 
