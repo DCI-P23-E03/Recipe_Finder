@@ -31,34 +31,26 @@ def recipe_search():
 
             if len(key_list) == 1: #only looking for one search term
                 keyselection = key_list[0]
-    
                 for row in reader:
-                    # looking for the keyword in different varieties
-                    if keyselection in row [1] or keyselection in row [2] or keyselection in row [5]or keyselection.lower() in row [1] or keyselection.lower() in row [2] or keyselection.lower() in row [5] or keyselection.capitalize() in row [1] or keyselection.capitalize() in row [2] or keyselection.capitalize() in row [5]:
+                    # looking for the keyword in different varieties, 
+                    if keyselection in row [1] or keyselection in row [2] or keyselection in row [6]or keyselection.lower() in row [6] or keyselection.lower() in row [2] or keyselection.lower() in row [6] or keyselection.capitalize() in row [1] or keyselection.capitalize() in row [2] or keyselection.capitalize() in row [6]:
                         recipe_number = row [0]
                         recipe_name = row [1]
                         recipe_list_num.append(recipe_number) # Collect recipe numbers in a list to count
                         recipe_list_name.append(recipe_name) #Collect recipe names in a list
                         recipe_count = (len(recipe_list_num)) # Calculate how many recipes have been found
-                        #print(type(recipe_count))    
-                        #print(f"{recipe_number} {recipe_name}")
+    
             
-            elif len(key_list) > 1:
-                #key_list = set(key_list)
-                count = 0
-                for row in reader:   
-                    found = 0 
-                    for key in key_list:
-                        if key in row[6]:
-                            found += 1
-                    if found == len(key_list):
+            elif len(key_list) > 1: # search for multiple elements
+                for row in reader:
+                    if all(key in row[6] for key in key_list) or all(key in row[2] for key in key_list) or all(key in row[1] for key in key_list):
                         recipe_number = row [0]
                         recipe_name = row [1]
                         recipe_list_num.append(recipe_number) # Collect recipe numbers in a list to count
                         recipe_list_name.append(recipe_name) #Collect recipe names in a list
-                        recipe_count = (len(recipe_list_num))
-
-            #clear_screen()
+                        recipe_count = (len(recipe_list_num)) # Calculate how many recipes have been found
+                    
+            clear_screen()
 
             if recipe_count > 0:
                 clear_screen()                    
